@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import logo from "../../../public/logo.png";
 
 const Navbar = () => {
   return (
@@ -32,15 +34,39 @@ const Navbar = () => {
             <li tabIndex={0}>
               <details>
                 <summary>About Us</summary>
-                <ul className="p-2">
-                  {/* <li>
-                    <Link href="/mission">Mission & Vision</Link>
-                  </li> */}
+
+                <ul className="p-2 w-48">
                   <li>
-                    <a>FBCCI</a>
+                    <details>
+                      <summary>FBCCI</summary>
+                      <ul className="p-2 dropdown-right w-40">
+                        <li>
+                          <a>Brief History</a>
+                        </li>
+                        <li>
+                          <a>Board of Directors</a>
+                        </li>
+                      </ul>
+                    </details>
                   </li>
                   <li>
-                    <a>FRIC</a>
+                    <details>
+                      <summary>FIRC</summary>
+                      <ul className="p-2 w-40">
+                        <li>
+                          <Link href="/mission">Mission & Vision</Link>
+                        </li>
+                        <li>
+                          <a>Governing Body</a>
+                        </li>
+                        <li>
+                          <Link href="/secretariat">FIRC secretariat</Link>
+                        </li>
+                        <li>
+                          <Link href="/expert">Expert Panel</Link>
+                        </li>
+                      </ul>
+                    </details>
                   </li>
                 </ul>
               </details>
@@ -52,7 +78,7 @@ const Navbar = () => {
               <Link href="/">Research</Link>
             </li>
             <li>
-              <Link href="/">Training</Link>
+              <Link href="/training">Training</Link>
             </li>
             <li>
               <Link href="/">Incubation</Link>
@@ -74,25 +100,25 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">Logo</a>
+        <a>
+          <Image src={logo} alt="logo" width={100} height={120} />
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 z-50">
           <li>
             <Link href="/">Home</Link>
           </li>
+
           <li tabIndex={0}>
             <details>
               <summary>About Us</summary>
 
-              <ul className="p-2">
-                {/* <li>
-                  <Link href="/mission">Mission & Vision</Link>
-                </li> */}
+              <ul className="p-2 w-52">
                 <li>
                   <details>
                     <summary>FBCCI</summary>
-                    <ul className="p-2 dropdown-right">
+                    <ul className="p-2 dropdown-right w-44">
                       <li>
                         <a>Brief History</a>
                       </li>
@@ -105,18 +131,18 @@ const Navbar = () => {
                 <li>
                   <details>
                     <summary>FIRC</summary>
-                    <ul className="p-2">
+                    <ul className="p-2 w-44">
                       <li>
-                        <Link href='/mission'>Mission & Vision</Link>
+                        <Link href="/mission">Mission & Vision</Link>
                       </li>
                       <li>
                         <a>Governing Body</a>
                       </li>
                       <li>
-                        <Link href='/secretariat'>FIRC secretariat</Link>
+                        <Link href="/secretariat">FIRC secretariat</Link>
                       </li>
                       <li>
-                        <Link href='/expert'>Expert Panel</Link>
+                        <Link href="/expert">Expert Panel</Link>
                       </li>
                     </ul>
                   </details>
@@ -131,7 +157,7 @@ const Navbar = () => {
             <Link href="/">Research</Link>
           </li>
           <li>
-            <Link href="/">Training</Link>
+            <Link href="/training">Training</Link>
           </li>
           <li>
             <Link href="/">Incubation</Link>

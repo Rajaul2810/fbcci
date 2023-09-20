@@ -2,7 +2,7 @@ import React from "react";
 
 const Mission = () => {
   return (
-    <div className=" flex justify-center">
+    <div className=" flex justify-center mt-5 mb-5">
       <div className=" w-11/12 md:w-10/12 shadow-md rounded-sm mt-5 border-t-4 border-yellow-600">
         <div className="p-5">
           <h1 className=" text-xl font-bold">Mission</h1>
@@ -26,6 +26,17 @@ const Mission = () => {
             (STEAM) curriculum transfer to address mid-level management HR
             requirements, re-skilling and 4IR HR demands, more engagement among
             the national and international chambers, ADRs Center.
+          </p>
+        </div>
+        <div className="p-5">
+          <h1 className=" text-xl font-bold">Vision</h1>
+          <div className=" h-2 bg-yellow-300 w-16"></div>
+        </div>
+        <div>
+          <p className=" text-justify text-gray-600 p-5 text-md">
+            To be the center of excellence in policy Advocacy and all matter
+            relevant to trade and investment facilitation from CMSME to the
+            largest sector of Bangladesh.
           </p>
         </div>
       </div>
